@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Fromulário de devolução</title>
+
+    <style>
+        * {
+            font-size: large;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card {
+            border-radius: 1vw;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark mr-auto mb-3">
+        <a class="navbar-brand " href="#"></a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto align-items-center text-left ">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="./assets/images/Original_ONLY.png" width="80vw" alt="">
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle h-100" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categorias
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Ar Condicionado</a>
+                        <a class="dropdown-item" href="#">Batedeira</a>
+                        <a class="dropdown-item" href="#">Chuveiros</a>
+                        <a class="dropdown-item" href="#">Fogões</a>
+                        <a class="dropdown-item" href="#">Geladeiras</a>
+                        <a class="dropdown-item" href="#">Liquidificadores</a>
+                        <a class="dropdown-item" href="#">Lava e seca</a>
+                        <a class="dropdown-item" href="#">Misteira</a>
+                        <a class="dropdown-item" href="#">Televisores</a>
+
+                        <div class="dropdown-divider"></div>
+                        <div class=" dropdown-item form-outline">
+                            <input type="search" id="form1" class="form-control" placeholder="Pesquisar..."
+                                aria-label="Search" />
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="form.html">Devolução</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Sobre</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-light">
+        <form class="my-3 mx-5" >
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <label for="inputName ">Nome completo</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="João da Silva Amaral" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCPF ">CPF</label>
+                    <input type="text" class="form-control" id="inputCPF" placeholder="123.123.032-20" maxlength="14" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group  col-md-12">
+                    <label for="inputEmail">E-mail</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="seu@email.com" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Cidade</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="Curitiba" required>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="inputState">Estado</label>
+                    <select id="inputState" class="form-control" required>
+                        <option value selected disabled hidden>Selecione sua UF</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+                        <option value="1">...</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label for="inputZip">CEP</label>
+                    <input type="text" class="form-control" id="inputZip" maxlength="9" required>
+                </div>
+            </div>
+
+            <!-- Selecionar Tipo De Endereço -->
+            <div class="form-row">
+                <select id="inputAdressType" class="form-group col-md-6 custom-select" required>
+                    <option value disable hidden selected>Tipo de endereço...</option>
+                    <option value="homeAddress">Casa</option>
+                    <option value="workAddress">Trabalho</option>
+                    <option value="otherAddress">Outro</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-9">
+                    <label for="inputAddress">Endereço</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Av. João Cabral">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputHouseNumber">Numero/Apt.</label>
+                    <input type="text" class="form-control" id="inputHouseNumber" placeholder="28 bloco C">
+                </div>
+            </div>
+
+            <!-- CHECK BOXES -->
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="spamCheck" required>
+                        <label class="form-check-label" for="spamCheck">
+                            Aceito os termos de troca e devolução de produtos.
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enviar Imagem Do Produto -->
+            <div class="form-row">
+                <div class="form-group col-md-12 custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Selecione uma foto do produto...</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="exampleFormControlTextarea1">Descreva o motivo da devolução...</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3 align-self-end">Enviar</button>
+        </form>
+
+
+        <footer class="row justify-content-center">
+            <section class="col-md-3 col-sm-12">
+                <img src="./assets/images/Original_ONLY.png" alt="Logo">
+            </section>
+
+            <section class="col-md-3 col-sm-12">
+                <ul class="footer_links">
+                    <li><a href="#About">Quem somos</a></li>
+                    <li><a href>Política de devolução</a></li>
+                </ul>
+            </section>
+
+            <section class="col-md-4 col-sm-12">
+                <ul class="footer_links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="form.html">Formulário de devolução</a></li>
+                    <li><a href="services.html">Serviços</a></li>
+                </ul>
+            </section>
+            <section class="copyr">
+                <span>EletroDOM s.a. / CNPJ: 00.000.000/0000-00 / Inscrição Estadual: 12.345.67-8 / Endereço JavaScript,
+                    102
+                    - Bootstrap, JQuery (JQ) - 55136-6240
+                </span>
+            </section>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script src="./assets/js/formValidation.js"></script>
+
+</body>
+
+</html>
